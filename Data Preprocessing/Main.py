@@ -15,7 +15,7 @@ print(y)
 #Taking Care of Missing Values
 
 from sklearn.impute import SimpleImputer
-imputer = SimpleImputer(missing_values=np.nan,strategy='mean')
+imputer = SimpleImputer(missing_values=np.nan,strategy='mean') #median and most_frequenlty is also available but mean is most acceptable
 imputer.fit(x[:,1:3])
 x[:,1:3] = imputer.transform(x[:,1:3])
 print("Data replaced with missing value")
