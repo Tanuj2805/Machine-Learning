@@ -20,3 +20,12 @@ imputer.fit(x[:,1:3])
 x[:,1:3] = imputer.transform(x[:,1:3])
 print("Data replaced with missing value")
 print(x)
+
+
+#Encoding Independent Variables
+
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+ct = ColumnTransformer(transformers=[('encoder',OneHotEncoder(),[0])], remainder="passthrough")
+x = np.array(ct.fit_transform(x)) #Converting this to numpy array as we want a x to be numpy array while training data
+print(x)
