@@ -29,3 +29,10 @@ from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder',OneHotEncoder(),[0])], remainder="passthrough")
 x = np.array(ct.fit_transform(x)) #Converting this to numpy array as we want a x to be numpy array while training data
 print(x)
+
+#Encoding Dependent Variables
+
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+y = le.fit_transform(y)
+print(y)
