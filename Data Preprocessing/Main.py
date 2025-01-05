@@ -48,3 +48,5 @@ print(y_test)
 
 from sklearn.preprocessing import StandardScaler
 fs = StandardScaler()
+x_train[:, 3:] = fs.fit_transform(x_train[:, 3:])
+print(x_train)
