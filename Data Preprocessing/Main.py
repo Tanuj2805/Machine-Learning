@@ -46,3 +46,5 @@ print(x_test)
 print(y_train)
 print(y_test)
 
+from sklearn.preprocessing import StandardScaler
+fs = StandardScaler()
