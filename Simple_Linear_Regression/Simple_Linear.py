@@ -41,6 +41,7 @@ print("Predicted data set")
 print(y_pred)
 
 
+#Visualize Training Dataset
 plo.scatter(x_train,y_train,color='red');
 plo.plot(x_train,regressor.predict(x_train))
 plo.title("Data Visualization")
@@ -48,8 +49,9 @@ plo.xlabel("Year Of Experience")
 plo.ylabel("Salary")
 plo.show();
 
+#Visualize Test Dataset
 plo.scatter(x_test,y_test,color='red');
-plo.plot(x_train,regressor.predict(x_train))
+plo.plot(x_train,regressor.predict(x_train)) #regression line will remain same so no need to replace with xtest
 plo.title("Data Visualization")
 plo.xlabel("Year Of Experience")
 plo.ylabel("Salary")
