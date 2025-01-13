@@ -47,3 +47,10 @@ plo.title("Data Visualization")
 plo.xlabel("Year Of Experience")
 plo.ylabel("Salary")
 plo.show();
+
+plo.scatter(x_test,y_test,color='red');
+plo.plot(x_train,regressor.predict(x_train))
+plo.title("Data Visualization")
+plo.xlabel("Year Of Experience")
+plo.ylabel("Salary")
+plo.show();
