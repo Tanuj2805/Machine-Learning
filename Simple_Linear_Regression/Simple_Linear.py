@@ -1,6 +1,6 @@
 #IMPORTING LIBRARY
 import numpy as np
-import matplotlib as plo
+import matplotlib.pyplot as plo
 import pandas as pd
 
 #IMPORTED DATASET
@@ -41,3 +41,9 @@ print("Predicted data set")
 print(y_pred)
 
 
+plo.scatter(x_train,y_train,color='red');
+plo.plot(x_train,regressor.predict(x_train))
+plo.title("Data Visualization")
+plo.xlabel("Year Of Experience")
+plo.ylabel("Salary")
+plo.show();
