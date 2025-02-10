@@ -15,3 +15,11 @@ from sklearn.preprocessing import OneHotEncoder
 tranformer = ColumnTransformer(transformers=[('Encode',OneHotEncoder(), [3])], remainder="passthrough")
 x = np.array(tranformer.fit_transform(x));
 print(x)
+
+from sklearn.model_selection import train_test_split
+xtrain , xtest,ytain,ytest = train_test_split(x,y,test_size=0.2,random_state=0)
+
+print(xtrain)
+print(xtest)
+print(ytain)
+print(ytest)
