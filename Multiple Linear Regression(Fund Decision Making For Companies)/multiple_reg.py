@@ -10,3 +10,7 @@ print(x)
 print(y)
 
 from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+tranformer = ColumnTransformer(transformers=[('Encode',OneHotEncoder(), [3])], remainder="passthrough")
+x = np.array(tranformer.fit_transform(x));
+print(x)
