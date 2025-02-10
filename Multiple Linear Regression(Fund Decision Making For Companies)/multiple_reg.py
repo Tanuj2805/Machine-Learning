@@ -11,6 +11,7 @@ print(y)
 
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
+                                             #Transformer Name as per you, Object of ecoder you want, column Number (You can Also Add more encode in tuple
 tranformer = ColumnTransformer(transformers=[('Encode',OneHotEncoder(), [3])], remainder="passthrough")
 x = np.array(tranformer.fit_transform(x));
 print(x)
