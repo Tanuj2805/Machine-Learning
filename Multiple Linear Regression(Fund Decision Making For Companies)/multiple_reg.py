@@ -29,3 +29,8 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression();
 regressor.fit(xtrain,ytain);
 
+ypred = regressor.predict(xtest)
+np.set_printoptions(precision=2)#Set tp print only 2 decimal points while printing float
+
+print(ypred)
+print(ytest)
