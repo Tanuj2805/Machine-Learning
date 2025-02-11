@@ -23,3 +23,9 @@ print(xtrain)
 print(xtest)
 print(ytain)
 print(ytest)
+
+
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression();
+regressor.fit(xtrain,ytain);
+
